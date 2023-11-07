@@ -27,6 +27,15 @@ document.querySelector('#app').innerHTML = `
 
 setupCounter(document.querySelector('#counter'));
 
+
+
+let timeSinceSchool = dayjs('2023-09-05');
+
+let now = dayjs();
+let days = now.diff(timeSinceSchool, 'days');
+
+document.getElementById("school-start").innerHTML= (`On ${now.format('YYYY-MM-DD')}, ${days} days have passed since I started this program. Ohjeez.`);
+
 // ES 2015
 // this code is messed up somehow and breaks website
 // const dayjs = require('dayjs');

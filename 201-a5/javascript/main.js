@@ -2,6 +2,10 @@ import '../css/style.css'
 import javascriptLogo from '../assets/javascript.svg'
 import viteLogo from '../assets/vite.svg'
 import { setupCounter } from '../javascript/counter.js'
+import dayjs from '../node_modules/dayjs'
+import tailwindcss from '../src/index.css'
+
+
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,4 +25,22 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));
+
+ // ES 2015
+// this code is messed up somehow and breaks website
+// let dayjs = require('dayjs');
+// dayjs().format();
+
+
+
+// console.log('hi');
+
+var calendar = require('dayjs/plugin/calendar')
+dayjs.extend(calendar);
+
+const timeToday = dayjs().calendar(dayjs('2023-11-06')).toString();
+
+document.querySelector('#date').innerHTML = timeToday;
+
+

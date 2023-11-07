@@ -2,8 +2,8 @@ import '../css/style.css'
 import javascriptLogo from '../assets/javascript.svg'
 import viteLogo from '../assets/vite.svg'
 import { setupCounter } from '../javascript/counter.js'
-import dayjs from 'dayjs'
 import tailwindcss from '../src/index.css'
+import dayjs from "dayjs";
 
 
 
@@ -27,21 +27,22 @@ document.querySelector('#app').innerHTML = `
 
 setupCounter(document.querySelector('#counter'));
 
- // ES 2015
+// ES 2015
 // this code is messed up somehow and breaks website
 // const dayjs = require('dayjs');
-dayjs().format();
+// dayjs().format();
 
+dayjs().hour() // gets current hour
+newDate = dayjs().hour(12)
 
-
+document.querySelector('#date').innerHTML = newDate;
 // // console.log('hi');
 
-var calendar = require('dayjs/plugin/calendar')
-dayjs.extend(calendar);
+// var calendar = require('dayjs/plugin/calendar')
+// dayjs.extend(calendar);
 
-const timeToday = dayjs().calendar(dayjs('2023-11-06')).toString();
+// const timeToday = dayjs().calendar(dayjs('2023-11-06')).toString();
 
-document.querySelector('#date').innerHTML = timeToday;
 
 // sorry tony i just dont know how to make this work 
 

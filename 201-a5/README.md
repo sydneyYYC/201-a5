@@ -28,3 +28,4 @@ dayjs().format();
 - i erased this and used import dayjs from this [stackoverflow](https://stackoverflow.com/questions/70995823/dayjs-not-a-function)
 
 - not able to get dayjs functionality
+- went back to [this](https://gist.github.com/acidtone/232d9c9a0997692483fca51b6f624a61)
